@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoSort C - Visualizador Dinâmico de Pilha</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/c.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">♻️ EcoSort C — Algoritmos II (Pilhas em C)</div>
+  </header>
+  <main class="app-container">
+    <section class="panel game-panel">
+      <h2>🎮 EcoSort: 4 Resíduos & 2 Lixeiras Vazias</h2>
+      <p class="desc">
+        Clique na lixeira de origem para consultar o topo e desempilhar (POP), depois clique na lixeira de destino para empilhar (PUSH).
+      </p>
+      <div class="status-bar" id="game-status">Selecione uma lixeira de origem!</div>
+      <div class="bins-container" id="bins-container"></div>
+      <div class="controls">
+        <button class="btn btn-primary" onclick="resetGame()">🔄 Novo Jogo</button>
+      </div>
+    </section>
+
+    <section class="panel code-panel">
+      <h2>💻 Trecho do Código C em Execução (Dinâmico)</h2>
+      <p class="desc" id="code-desc">Abaixo é exibida apenas a função em C que está sendo acionada no momento da jogada.</p>
+      <div class="code-wrapper">
+        <pre><code class="language-c" id="c-code">/* Selecione uma lixeira para ver a função C em ação */
+void aguardandoJogada() {
+    // Pronto para interagir
+}</code></pre>
+      </div>
+      <div class="memory-inspector">
+        <h3>🔍 Monitor do Estado Interno da Memória</h3>
+        <div id="memory-state"></div>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

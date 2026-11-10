@@ -1,0 +1,27 @@
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+body { background-color: #12181f; color: #e0e6ed; min-height: 100vh; display: flex; flex-direction: column; }
+header { background: #1a2332; padding: 1rem 2rem; border-bottom: 2px solid #2d3b50; }
+.app-container { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 20px; flex: 1; }
+.panel { background: #1a2332; border-radius: 12px; padding: 20px; border: 1px solid #2d3b50; }
+.panel h2 { font-size: 1.25rem; color: #5ac8fa; margin-bottom: 8px; }
+.desc { font-size: 0.85rem; color: #a0aec0; margin-bottom: 15px; }
+.status-bar { background: #243044; padding: 10px 14px; border-radius: 8px; font-size: 0.9rem; color: #ffcc00; margin-bottom: 20px; border-left: 4px solid #ffcc00; }
+.bins-container { display: flex; justify-content: space-around; align-items: flex-end; flex: 1; padding: 20px 5px; background: #151c28; border-radius: 10px; }
+.bin { width: 68px; height: 220px; background: rgba(255, 255, 255, 0.05); border: 3px solid #63738a; border-top: none; border-radius: 0 0 14px 14px; display: flex; flex-direction: column-reverse; align-items: center; padding: 6px; gap: 5px; cursor: pointer; position: relative; }
+.bin:hover { border-color: #5ac8fa; }
+.bin.selected { border-color: #ffcc00; transform: translateY(-5px); }
+.bin::before { content: "Lix. " attr(data-id); position: absolute; bottom: -28px; font-size: 0.7rem; color: #a0aec0; font-weight: 600; }
+.item { width: 100%; height: 42px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: bold; color: #ffffff; box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.2); }
+.item[data-type="Papel"] { background: #3182ce; }
+.item[data-type="Vidro"] { background: #38a169; }
+.item[data-type="Metal"] { background: #e53e3e; }
+.item[data-type="Plastico"] { background: #dd6b20; }
+.controls { margin-top: 35px; display: flex; gap: 10px; }
+.btn { padding: 10px 16px; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; background: #3182ce; color: white; }
+.btn:hover { background: #2b6cb0; }
+.code-wrapper { background: #282c34; border-radius: 8px; max-height: 290px; overflow-y: auto; border: 1px solid #3e4451; }
+pre code { font-family: 'Consolas', monospace; font-size: 0.8rem; }
+.memory-inspector { margin-top: 15px; background: #151c28; border-radius: 8px; padding: 12px; border: 1px solid #243044; }
+.memory-inspector h3 { font-size: 0.95rem; color: #4cd964; margin-bottom: 8px; }
+.bin-mem { display: inline-block; background: #1a2332; border: 1px solid #2d3b50; padding: 5px 8px; border-radius: 6px; margin-right: 6px; margin-bottom: 6px; font-family: monospace; font-size: 0.75rem; }
+.bin-mem .topo-idx { color: #ffcc00; font-weight: bold; }
